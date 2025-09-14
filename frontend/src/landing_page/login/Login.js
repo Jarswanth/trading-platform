@@ -20,7 +20,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("https://zerodha-backend-plg8.onrender.com/signup", formData, {
+      const response = await axios.post("https://zerodha-backend-plg8.onrender.com/login", formData, {
         withCredentials: true, // required for cookies/session
       });
       console.log(response.data);
