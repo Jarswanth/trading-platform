@@ -11,8 +11,8 @@ const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);
 
-  const handleBuyClick = () => {
-    axios.post("https://zerodha-backend-plg8.onrender.com/newOrder", {
+  const handleBuyClick = async() => {
+    await axios.post("https://zerodha-backend-plg8.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
@@ -21,7 +21,7 @@ const BuyActionWindow = ({ uid }) => {
     //  { withCredentials: true }
   );
 
-    axios.post("https://zerodha-backend-plg8.onrender.com/addHoldings",{
+    await axios.post("https://zerodha-backend-plg8.onrender.com/addHoldings",{
       name:uid,
       qty:stockQuantity,
       avg:stockPrice,
@@ -72,9 +72,9 @@ const BuyActionWindow = ({ uid }) => {
       <div className="buttons">
         <span>Margin required ₹140.65</span>
         <div>
-          <Link className="btn btn-blue" onClick={handleBuyClick}>
+          <button className="btn btn-blue" onClick={handleBuyClick} >
             Buy
-          </Link>
+          </button>
           <Link to="" className="btn btn-grey" onClick={handleCancelClick}>
             Cancel
           </Link>
