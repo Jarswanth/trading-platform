@@ -28,7 +28,7 @@ const formattedPLPercent = profitLossPercent.toFixed(2);
 
   useEffect(() => {
   axios
-    .get("https://zerodha-backend-plg8.onrender.com/allOrders", {
+    .get("https://zerodha-backend-plg8.onrender.com/allHoldings", {
       // withCredentials: true, // ✅ send JWT cookie
     })
     .then((res) => {
