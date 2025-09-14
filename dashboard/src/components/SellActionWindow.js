@@ -12,7 +12,7 @@ const SellActionWindow = ({ uid }) => {
   const [stockPrice, setStockPrice] = useState(0.0);
 
   const handleSellClick = () => {
-    axios.post("http://localhost:8080/newOrder", {
+    axios.post("https://zerodha-backend-plg8.onrender.com/newOrder", {
       name: uid,
       qty: stockQuantity,
       price: stockPrice,
