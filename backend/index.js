@@ -22,7 +22,7 @@ const url=process.env.MONGO_URL;
 const app=express();
 
 app.use(cors({
-  origin: ["https://trading-platform-2zkf.onrender.com"],// frontend URL
+  origin: ["https://dashboard-9eal.onrender.com"],// frontend URL
   credentials: true,
 }));
 app.use(bodyParser.json());
