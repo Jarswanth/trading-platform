@@ -26,7 +26,7 @@ function Login() {
       console.log(response.data);
       alert("Login Successful!");
 
-      window.location.href = 'http://localhost:3001/';
+      window.location.href = 'https://dashboard-9eal.onrender.com';
 
       // Redirect or store user info if needed
       // Example: window.location.href = "/dashboard";
