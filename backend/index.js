@@ -22,7 +22,7 @@ const url=process.env.MONGO_URL;
 const app=express();
 
 app.use(cors({
-  origin: ["http://localhost:3000" ,"http://localhost:3001"],// frontend URL
+  origin: ["https://trading-platform-2zkf.onrender.com"],// frontend URL
   credentials: true,
 }));
 app.use(bodyParser.json());

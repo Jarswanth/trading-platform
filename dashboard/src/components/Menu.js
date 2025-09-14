@@ -14,7 +14,7 @@ const Menu = () => {
 
   const handleProfileClick = (index) => {
     setIsProfileDropdownOpen(!isProfileDropdownOpen);
-    window.location.href = 'http://localhost:3000/';
+    window.location.href = 'https://trading-platform-2zkf.onrender.com';
 
   };
 

@@ -25,7 +25,7 @@ function Signup() {
    const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post("http://localhost:8080/signup", formData, {
+      const response = await axios.post("https://zerodha-backend-plg8.onrender.com/signup", formData, {
         withCredentials: true, // if you're setting cookies
       });
       console.log(response.data);
